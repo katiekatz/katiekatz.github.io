@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Muli|Satisfy&display=swap" rel="stylesheet">        <link rel=stylesheet href="main.css">
+        <script src="https://kit.fontawesome.com/124687a34e.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <title>Kaitlyn Katz</title>
     </head>
     
@@ -15,10 +17,10 @@
             <p>CS/Linguistics Student @ McGill University</p>
             <div class="container-fluid">
                 <div class="row">
-                    <a class="col-sm-3" href="index.html">HOME</a>
-                    <a class="col-sm-3" href="index.html">EDUCATION</a>
-                    <a class="col-sm-3" href="index.html">EXPERIENCE</a>
-                    <a class="col-sm-3" href="index.html">SKILLS</a>
+                    <a class="col-sm-3" href="#" id="home-button">HOME</a>
+                    <a class="col-sm-3" href="#" id="education-button">EDUCATION</a>
+                    <a class="col-sm-3" href="#" id="experience-button">EXPERIENCE</a>
+                    <a class="col-sm-3" href="#" id="skills-button">SKILLS</a>
 
                 </div>
             </div>
@@ -26,14 +28,63 @@
         
         <div class="container-fluid">
             <div class="row no-gutters">
+                
                 <div class="main-area col-sm-9">
-                    <p>main area</p>
+                    <div class="col-12" id="show-home">
+                        <p>Hello</p>
+                    </div>
+                    <div class="col-12" id="show-education">
+                        <h2 class="text-center">Education</h2>
+                    </div>
+                    <div class="col-12" id="show-experience">
+                        <p>Hello3</p>
+                    </div>
+                    <div class="col-12" id="show-skills">
+                        <p>Hello4</p>
+                    </div>
                 </div>
+                
                 <div class="sidebar col-sm-3 mh-100">
-                    <p>sidebar</p>
+                    <div class="col-12" id="propic-div">
+                        <img class="mx-auto" src="propic.JPG">
+                    </div>
+                    <div class="col-12 text-center">
+                        <h4>Contact</h4>
+                        <p><a href="mailto:katz.kaitlyn@gmail.com">katz.kaitlyn@gmail.com</a><br>(973)818-7713</p>
+                        <h4><a id="resume-link" href="KaitlynKatzResume.pdf" download>Resume <i class="fas fa-file-download"></i></a></h4>
+                    </div>
                 </div>
             </div>
         </div>
-        
+        <script type="text/javascript">
+            
+            $("#home-button").mouseup(function(){
+                $("#show-home").show();
+                $("#show-education").hide();
+                $("#show-experience").hide();
+                $("#show-skills").hide();
+            });
+            
+            $("#education-button").mouseup(function(){
+                $("#show-home").hide();
+                $("#show-education").show();
+                $("#show-experience").hide();
+                $("#show-skills").hide();
+            });
+            
+            $("#experience-button").mouseup(function(){
+                $("#show-home").hide();
+                $("#show-education").hide();
+                $("#show-experience").show();
+                $("#show-skills").hide();
+            });
+            
+            $("#skills-button").mouseup(function(){
+                $("#show-home").hide();
+                $("#show-education").hide();
+                $("#show-experience").hide();
+                $("#show-skills").show();
+            });
+        </script>
     </body>
 </document>

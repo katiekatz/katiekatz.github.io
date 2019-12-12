@@ -8,6 +8,7 @@ h1 {
 
 .main-area {
     margin: 0;
+    min-height: 100%;
     border-right: 1px solid #ccc;
 }
 
@@ -50,4 +51,28 @@ div {
 
 .no-gutters {
     min-height: calc(100% - 180px);
+}
+
+img {
+    padding: 1em;
+    width: 100%;
+    border-radius: 7em;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#resume-link {
+    color: inherit;
+}
+
+#show-home {
+    background-color: red;
+    min-height: inherit;
+}
+
+#show-education {
+    background-color: orange;
+    min-height: inherit;
 }
