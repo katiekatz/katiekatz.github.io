@@ -49,7 +49,7 @@ div {
   float: right!important;
 }
 
-.no-gutters {
+.bg{
     min-height: calc(100% - 180px);
 }
 
@@ -68,11 +68,65 @@ a:hover {
 }
 
 #show-home {
-    background-color: red;
+    background-color: #d6e7ff;
     min-height: inherit;
 }
 
 #show-education {
-    background-color: orange;
+    background-color: #d6e7ff;
     min-height: inherit;
+    display: none;
+}
+
+#show-experience {
+    background-color: #d6e7ff;
+    min-height: inherit;
+    display: none;
+}
+
+#show-skills {
+    background-color: #d6e7ff;
+    min-height: inherit;
+    display: none;
+}
+
+h2 {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul.experience {
+    list-style: square;
+    padding-left: 40px;
+}
+
+#cashier {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+#about-me {
+    padding: 1.5em;
+}
+
+.icon {
+    font-size: 5em;
+}
+
+#icon1 {
+    color: #2867B2;
+}
+
+.icon {
+    color: black;
+    padding-bottom: 0.5em;
+}
+
+.icon:hover {
+    color: black;
 }
