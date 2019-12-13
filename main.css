@@ -130,3 +130,9 @@ ul.experience {
 .icon:hover {
     color: black;
 }
+
+@media screen and (max-width: 575px) {
+  #cashier {
+     border: none;
+  }
+}
