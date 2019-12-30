@@ -18,10 +18,11 @@
             <p>CS/Linguistics Student @ McGill University</p>
             <div class="container-fluid">
                 <div class="row no-gutters">
-                    <a class="col-sm-3" href="#" id="home-button">HOME</a>
-                    <a class="col-sm-3" href="#" id="education-button">EDUCATION</a>
-                    <a class="col-sm-3" href="#" id="experience-button">EXPERIENCE</a>
-                    <a class="col-sm-3" href="#" id="skills-button">SKILLS</a>
+                    <a class="col-sm-2 offset-sm-1" href="#" id="home-button">HOME</a>
+                    <a class="col-sm-2" href="#" id="education-button">EDUCATION</a>
+                    <a class="col-sm-2" href="#" id="experience-button">EXPERIENCE</a>
+                    <a class="col-sm-2" href="#" id="skills-button">SKILLS</a>
+                    <a class="col-sm-2" href="#" id="projects-button">PROJECTS</a>
 
                 </div>
             </div>
@@ -33,7 +34,7 @@
                 <div class="main-area col-12 col-md-9">
                     <div class="col-12" id="show-home">
                         <div class="row no-gutters text-center" id="about-me">
-                            <h4>Hi! I'm Kaitlyn - it's nice to meet you!<br><br>Looking for a software engineer intern?<br><br>Check out my resume (or just look around this website!), see some of my past projects on Github, then connect with me on LinkedIn or shoot me an email!</h4>
+                            <h4>Hi! I'm Kaitlyn - it's nice to meet you!<br><br>Looking for a software engineer intern?<br><br>Check out my resume (or just look around this website!), see some of my past projects, then connect with me on LinkedIn or shoot me an email!</h4>
                         </div>
                         <div class="row no-gutters text-center">
                             <a class="icon col-2 offset-3" id="icon1" href="http://www.linkedin.com/in/kaitlynkatz"><i class="fab fa-linkedin"></i></a>
@@ -140,12 +141,36 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-12" id="show-projects">
+                        <h2 class="text-center">Projects</h2>
+                        <div class="row no-gutters text-center">
+                            <div class="col-sm-4 offset-sm-1 project button-jittery" id="digipet">
+                                <h5>Digipet<br></h5>
+                                <img id="imgDigipet" src="digipet.svg">
+                            </div>
+                            <div class="col-sm-4 offset-sm-2 project button-jittery" id="mata">
+                            <h5>Masterclass at the Academies Website</h5>
+                                <img id="imgMatA" src="mata.svg">
+                            </div>
+                        </div>
+                        <div class="row no-gutters text-center">
+                            <div class="col-sm-4 offset-sm-1 project button-jittery" id="enkryptonite">
+                                <h5>Enkryptonite</h5>
+                                <img id="imgEnkryptonite" src="enkryptonite.svg">
+                            </div>
+                            <div class="col-sm-4 offset-sm-2 project button-jittery" id="myweb">
+                            <h5>Personal Website</h5>
+                                <img id="imgMyweb" src="myweb.svg">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 
                 <div class="sidebar col-12 col-md-3 mh-100">
                     <div class="row no-gutters">
                         <div id="propic-div" class="col-4 offset-4 col-md-8 offset-md-2">
-                            <img src="propic.JPG">
+                            <img id="propic" src="propic.JPG">
                         </div>
                     </div>
                     <div class="col-12 text-center">
@@ -155,6 +180,70 @@
                     </div>
                 </div>
             </div>
+            
+            
+            <!-- MODALS -->
+            
+            <div id="myModalDigipet" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span id="closeDigipet">&times;</span>
+                    <h2>Digipet</h2>
+                    <h5>A year-long capstone project at Bergen County Academies, my team's goal was to create a language-learning app that integrated multiple languages, with a focus on pronunciation and a main purpose of reinforcing lessons learned in a classroom environment. <br>Although time constraints limited the actual number of lessons and games that we implemented, we completed the entire layout of the app, including all main pages and lesson/game lists, as well as creating a few examples of both lessons and games. The app has lots of room for expansion with more lessons, games, and languages.</h5>
+                    <h4>Timeframe: 2 semesters</h4>
+                    <h4>Language: Swift</h4>
+                    <h5><a href="http://www.github.com/katiekatz/DigipetCapstone">Github Repository</a></h5>
+                </div>
+
+            </div>
+            
+            <div id="myModalMatA" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span id="closeMatA">&times;</span>
+                    <h2>Masterclass at the Academies Website</h2>
+                    <h5>As a volunteer project for a theater group at my high school, I created a website advertising their upcoming Masterclass event. This was my first project to be used by the general public.<br>The responsive website features multiple pages and modal pop-ups.</h5>
+                    <h4>Timeframe: 2 months</h4>
+                    <h4>Languages: HTML, CSS/SCSS, jQuery</h4>
+                    <h5><a href="http://www.github.com/katiekatz/MatA">Github Repository</a></h5>
+                    <h5><a href="http://academymasterclasses.com">Website</a></h5>
+                </div>
+
+            </div>
+            
+            <div id="myModalEnkryptonite" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span id="closeEnkryptonite">&times;</span>
+                    <h2>Enkryptonite</h2>
+                    <h5>Enkryptonite was an individual project I made at one of my first-ever hackathons. I wanted to make a project reflecting my love of codes and puzzles.<br>The app allows users to pick from a list of different ciphers to encrypt and decrypt messages. Options included Caesar, Playfair, and Vigenère ciphers, among others.</h5>
+                    <h4>Timeframe: 24 Hours</h4>
+                    <h4>Awarded 1st Place at Code Day NJ Fall 2015</h4>
+                    <h4>Language: Swift</h4>
+                    <h5><a href="http://www.github.com/katiekatz/Enkryptonite">Github Repository</a></h5>
+                </div>
+
+            </div>
+            
+            <div id="myModalMyweb" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span id="closeMyweb">&times;</span>
+                    <h2>Personal Website</h2>
+                    <h5>You're looking at this project right now! This website was a challenge I set myself, like my own mini-hackathon. I wanted to create something that I could really use in just one day.<br>This website showcases both my resume and my actual coding skills at the same time. Representing multiple pages in one file via creative use of JavaScript, I used the Bootstrap framework to craft a simple yet responsive site.</h5>
+                    <h4>Initial Timeframe: 24 Hours</h4>
+                    <h4>Work in Progress</h4>
+                    <h4>Languages: HTML, CSS, jQuery</h4>
+                    <h5><a href="http://www.github.com/katiekatz/katiekatz.github.io">Github Repository</a></h5>
+                    <h5><a href="http://katiekatz.github.io">Website</a></h5>
+                </div>
+
+            </div>
+            
         </div>
         <script type="text/javascript">
             
@@ -163,6 +252,7 @@
                 $("#show-education").hide();
                 $("#show-experience").hide();
                 $("#show-skills").hide();
+                $("#show-projects").hide();
             });
             
             $("#education-button").mouseup(function(){
@@ -170,6 +260,7 @@
                 $("#show-education").show();
                 $("#show-experience").hide();
                 $("#show-skills").hide();
+                $("#show-projects").hide();
             });
             
             $("#experience-button").mouseup(function(){
@@ -177,6 +268,7 @@
                 $("#show-education").hide();
                 $("#show-experience").show();
                 $("#show-skills").hide();
+                $("#show-projects").hide();
             });
             
             $("#skills-button").mouseup(function(){
@@ -184,7 +276,79 @@
                 $("#show-education").hide();
                 $("#show-experience").hide();
                 $("#show-skills").show();
+                $("#show-projects").hide();
             });
+            
+            $("#projects-button").mouseup(function(){
+                $("#show-home").hide();
+                $("#show-education").hide();
+                $("#show-experience").hide();
+                $("#show-skills").hide();
+                $("#show-projects").show();
+            });
+            
+            
+            /* modal stuff */
+            var modalDigipet = document.getElementById('myModalDigipet');
+            var btnDigipet = document.getElementById("digipet");
+            var spanDigipet = document.getElementById("closeDigipet");
+            
+            btnDigipet.onclick = function() {
+                modalDigipet.style.display = "block";
+            }
+            spanDigipet.onclick = function() {
+                modalDigipet.style.display = "none";
+            }
+            
+            var modalMatA = document.getElementById('myModalMatA');
+            var btnMatA = document.getElementById("mata");
+            var spanMatA = document.getElementById("closeMatA");
+            
+            btnMatA.onclick = function() {
+                modalMatA.style.display = "block";
+            }
+            spanMatA.onclick = function() {
+                modalMatA.style.display = "none";
+            }
+            
+            var modalEnkryptonite = document.getElementById('myModalEnkryptonite');
+            var btnEnkryptonite = document.getElementById("enkryptonite");
+            var spanEnkryptonite = document.getElementById("closeEnkryptonite");
+            
+            btnEnkryptonite.onclick = function() {
+                modalEnkryptonite.style.display = "block";
+            }
+            spanEnkryptonite.onclick = function() {
+                modalEnkryptonite.style.display = "none";
+            }
+            
+            var modalMyweb = document.getElementById('myModalMyweb');
+            var btnMyweb = document.getElementById("myweb");
+            var spanMyweb = document.getElementById("closeMyweb");
+            
+            btnMyweb.onclick = function() {
+                modalMyweb.style.display = "block";
+            }
+            spanMyweb.onclick = function() {
+                modalMyweb.style.display = "none";
+            }
+            
+            window.onclick = function(event) {
+                if (event.target == modalDigipet) {
+                    modalDigipet.style.display = "none";
+                }
+                if (event.target == modalMatA) {
+                    modalMatA.style.display = "none";
+                }
+                if (event.target == modalEnkryptonite) {
+                    modalEnkryptonite.style.display = "none";
+                }
+                if (event.target == modalMyweb) {
+                    modalMyweb.style.display = "none";
+                }
+            }
+            
+             
         </script>
     </body>
 </document>
