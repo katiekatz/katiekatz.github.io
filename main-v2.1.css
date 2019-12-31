@@ -161,7 +161,7 @@ ul.experience {
 }
 
 .button-jittery:hover{
-    animation: heartbeat 0.5s infinite;
+    animation: heartbeat 1.5s infinite;
 }
 
 @keyframes heartbeat {
