@@ -34,7 +34,7 @@
                 <div class="main-area col-12 col-md-9">
                     <div class="col-12" id="show-home">
                         <div class="row no-gutters text-center" id="about-me">
-                            <h4>Hi! I'm Kaitlyn - it's nice to meet you!<br><br>Looking for a software engineer intern?<br><br>Check out my resume (or just look around this website!), see some of my past projects, then connect with me on LinkedIn or shoot me an email!</h4>
+                            <h4>Hi! I'm Kaitlyn - it's nice to meet you!<br><br>Looking for a software engineer intern?<br><br>Check out my resume (or just look around this website!), see some of my past projects, then connect with me on LinkedIn or shoot me an email!<br><br>Play my most recent project: <a href="./ultimate.html">Ultimate Tic-Tac-Toe</a></h4>
                         </div>
                         <div class="row no-gutters text-center">
                             <a class="icon col-2 offset-3" id="icon1" href="http://www.linkedin.com/in/kaitlynkatz"><i class="fab fa-linkedin"></i></a>
@@ -144,21 +144,27 @@
                     <div class="col-12" id="show-projects">
                         <h2 class="text-center">Projects</h2>
                         <div class="row no-gutters text-center">
-                            <div class="col-sm-4 offset-sm-1 project button-jittery" id="digipet">
+                            <div class="col-sm-4 offset-sm-1 project button-jittery" id="ultimate">
+                                <h5>Ultimate Tic-Tac-Toe<br></h5>
+                                <img id="imgUltimate" src="ultimate.svg">
+                            </div>
+                            <div class="col-sm-4 offset-sm-2 project button-jittery" id="digipet">
                                 <h5>Digipet<br></h5>
                                 <img id="imgDigipet" src="digipet.svg">
                             </div>
-                            <div class="col-sm-4 offset-sm-2 project button-jittery" id="mata">
+                        </div>
+                        <div class="row no-gutters text-center">
+                            <div class="col-sm-4 offset-sm-1 project button-jittery" id="mata">
                             <h5>Masterclass at the Academies Website</h5>
                                 <img id="imgMatA" src="mata.svg">
                             </div>
-                        </div>
-                        <div class="row no-gutters text-center">
-                            <div class="col-sm-4 offset-sm-1 project button-jittery" id="enkryptonite">
+                            <div class="col-sm-4 offset-sm-2 project button-jittery" id="enkryptonite">
                                 <h5>Enkryptonite</h5>
                                 <img id="imgEnkryptonite" src="enkryptonite.svg">
                             </div>
-                            <div class="col-sm-4 offset-sm-2 project button-jittery" id="myweb">
+                        </div>
+                        <div class="row no-gutters text-center">
+                            <div class="col-sm-4 offset-sm-4 project button-jittery" id="myweb">
                             <h5>Personal Website</h5>
                                 <img id="imgMyweb" src="myweb.svg">
                             </div>
@@ -183,6 +189,20 @@
             
             
             <!-- MODALS -->
+            
+            <div id="myModalUltimate" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span id="closeUltimate">&times;</span>
+                    <h2>Ultimate Tic-Tac-Toe</h2>
+                    <h5>This project was created at the beginning of my fourth semester at McGill, when I wanted to stretch out some of my old web dev skills and see what I could make. The webpage is responsive and follows all the rules of Ultimate-Tic-Tac-Toe by toggling the classes of different HTML elements using jQuery.</h5>
+                    <h4>Timeframe: 1 Weekend</h4>
+                    <h4>Languages: HTML, CSS, jQuery</h4>
+                    <h5><a href="http://www.github.com/katiekatz/DigipetCapstone">Github Repository</a></h5>
+                </div>
+
+            </div>
             
             <div id="myModalDigipet" class="modal">
 
@@ -289,6 +309,17 @@
             
             
             /* modal stuff */
+            var modalUltimate = document.getElementById('myModalUltimate');
+            var btnUltimate = document.getElementById("ultimate");
+            var spanUltimate = document.getElementById("closeUltimate");
+            
+            btnUltimate.onclick = function() {
+                modalUltimate.style.display = "block";
+            }
+            spanUltimate.onclick = function() {
+                modalUltimate.style.display = "none";
+            }
+            
             var modalDigipet = document.getElementById('myModalDigipet');
             var btnDigipet = document.getElementById("digipet");
             var spanDigipet = document.getElementById("closeDigipet");
@@ -334,6 +365,9 @@
             }
             
             window.onclick = function(event) {
+                if (event.target == modalUltimate) {
+                    modalUltimate.style.display = "none";
+                }
                 if (event.target == modalDigipet) {
                     modalDigipet.style.display = "none";
                 }

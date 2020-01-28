@@ -1,0 +1,463 @@
+<document>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Muli|Satisfy&display=swap" rel="stylesheet">
+        <link rel=stylesheet href="main-v2.1.css">
+        <link rel=stylesheet href="ultimate-v1.css">
+        <script src="https://kit.fontawesome.com/124687a34e.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <title>Ultimate Tic-Tac-Toe by kaitlynkatz</title>
+    </head>
+    
+    <body>
+        
+        <div class="jumbotron text-center">
+            <h1 id="myname">Ultimate Tic-Tac-Toe</h1>
+            <p>by Kaitlyn Katz</p>
+            <div class="container-fluid">
+                <div class="row no-gutters">
+                    <a class="col-sm-2 offset-sm-5" href="./index.html" id="home-button">HOME</a>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid">
+            <div class="row no-gutters bg">
+                
+                <div class="main-area col-12 col-md-9">
+                    <div class="col-12" id="show-game">
+                        
+                        <button id="startGame" class="col-6 offset-3 col-md-4 offset-md-4">Start Game</button>
+                        
+                        <div id="announcement" class="col-12"><a href="https://en.wikipedia.org/wiki/Ultimate_tic-tac-toe#Rules" target="_blank">(rules)</a></div>
+                        
+                        <table id="big-board" class="col-xl-8 offset-xl-2">
+                            <tr class="col-12 big-row row no-gutters">
+                                <td class="col-4 small-board NW">
+                                    <table class="col-12">
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell NW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell N"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell NE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell W"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell C"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell E"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell SW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell S"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell SE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td class="col-4 small-board N">
+                                    <table class="col-12">
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell NW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell N"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell NE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell W"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell C"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell E"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell SW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell S"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell SE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td class="col-4 small-board NE">
+                                    <table class="col-12">
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell NW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell N"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell NE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell W"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell C"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell E"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell SW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell S"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell SE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="col-12 big-row row no-gutters">
+                                <td class="col-4 small-board W">
+                                    <table class="col-12">
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell NW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell N"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell NE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell W"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell C"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell E"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell SW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell S"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell SE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td class="col-4 small-board C">
+                                    <table class="col-12">
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell NW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell N"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell NE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell W"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell C"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell E"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell SW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell S"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell SE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td class="col-4 small-board E">
+                                    <table class="col-12">
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell NW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell N"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell NE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell W"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell C"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell E"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell SW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell S"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell SE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="col-12 big-row row no-gutters">
+                                <td class="col-4 small-board SW">
+                                    <table class="col-12">
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell NW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell N"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell NE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell W"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell C"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell E"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell SW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell S"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell SE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td class="col-4 small-board S">
+                                    <table class="col-12">
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell NW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell N"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell NE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell W"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell C"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell E"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell SW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell S"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell SE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td class="col-4 small-board SE">
+                                    <table class="col-12">
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell NW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell N"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell NE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell W"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell C"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell E"><p class="box disabled n"></p></td>
+                                        </tr>
+                                        <tr class="col-12 small-row row no-gutters">
+                                            <td class="col-4 cell SW"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell S"><p class="box disabled n"></p></td>
+                                            <td class="col-4 cell SE"><p class="box disabled n"></p></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    </div>
+
+                </div>
+                
+                <div class="sidebar col-12 col-md-3 mh-100">
+                    <div class="row no-gutters">
+                        <div id="propic-div" class="col-4 offset-4 col-md-8 offset-md-2">
+                            <img id="propic" src="propic.JPG">
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <h4>Contact</h4>
+                        <p><a href="mailto:katz.kaitlyn@gmail.com">katz.kaitlyn@gmail.com</a><br>(973)818-7713</p>
+                        <h4><a id="resume-link" href="KaitlynKatzResume.pdf" download>Resume <i class="fas fa-file-download"></i></a></h4>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <script type="text/javascript">
+            
+            $("td").each(function(){
+                $(this).css("height", $(this).css("width"));
+            });
+            
+            
+            $(window).resize(function(){
+                $("td").each(function(){
+                    $(this).css("height", $(this).css("width"));
+                });
+            });
+            
+            var turnCount = 0;
+            var gameOver = 0;
+            var game1 = 0;
+            var game2 = 0;
+            var game3 = 0;
+            var game4 = 0;
+            var game5 = 0;
+            var game6 = 0;
+            var game7 = 0;
+            var game8 = 0;
+            var game9 = 0;
+            
+            $("#startGame").click(function(){
+                turnCount = 0;
+                var gameOver = 0;
+                var game1 = 0;
+                var game2 = 0;
+                var game3 = 0;
+                var game4 = 0;
+                var game5 = 0;
+                var game6 = 0;
+                var game7 = 0;
+                var game8 = 0;
+                var game9 = 0;
+                $(this).empty().append("Restart Game");
+                $(".disabled").each(function(){
+                    $(this).addClass("enabled");
+                    $(this).removeClass("disabled");
+                });
+                $(".box").each(function(){
+                    $(this).empty();
+                    if($(this).hasClass("x")){
+                        $(this).removeClass("x");
+                        $(this).addClass("n");
+                    } else if($(this).hasClass("o")){
+                        $(this).removeClass("o");
+                        $(this).addClass("n");
+                    }
+                });
+                $(".small-board").children().css("background-image", "none");
+                $("#announcement").empty().append('<a href="https://en.wikipedia.org/wiki/Ultimate_tic-tac-toe#Rules" target="_blank">(rules)</a>');
+            });
+            
+            function checkBoardForClass(board, clas){            
+                if(board.find(".NW").find(".box").hasClass(clas) && board.find(".N").find(".box").hasClass(clas) && board.find(".NE").find(".box").hasClass(clas)){
+                    return true;
+                }
+                if(board.find(".W").find(".box").hasClass(clas) && board.find(".C").find(".box").hasClass(clas) && board.find(".E").find(".box").hasClass(clas)){
+                    return true;
+                }
+                if(board.find(".SW").find(".box").hasClass(clas) && board.find(".S").find(".box").hasClass(clas) && board.find(".SE").find(".box").hasClass(clas)){
+                    return true;
+                }
+                if(board.find(".NW").find(".box").hasClass(clas) && board.find(".W").find(".box").hasClass(clas) && board.find(".SW").find(".box").hasClass(clas)){
+                    return true;
+                }
+                if(board.find(".N").find(".box").hasClass(clas) && board.find(".C").find(".box").hasClass(clas) && board.find(".S").find(".box").hasClass(clas)){
+                    return true;
+                }
+                if(board.find(".NE").find(".box").hasClass(clas) && board.find(".E").find(".box").hasClass(clas) && board.find(".SE").find(".box").hasClass(clas)){
+                    return true;
+                }
+                if(board.find(".NW").find(".box").hasClass(clas) && board.find(".C").find(".box").hasClass(clas) && board.find(".SE").find(".box").hasClass(clas)){
+                    return true;
+                }
+                if(board.find(".NE").find(".box").hasClass(clas) && board.find(".C").find(".box").hasClass(clas) && board.find(".SW").find(".box").hasClass(clas)){
+                    return true;
+                }
+                
+                return false;
+                
+            }
+            
+            function checkBoard(board){
+                if(checkBoardForClass(board, "x") == true){
+                    return 1;
+                } else if (checkBoardForClass(board, "o") == true){
+                    return 2;
+                }
+                return 0;
+            }
+            
+            function checkBigBoardForClass(board, clasNum){
+                if(checkBoard(board.find(".small-board.NW")) == clasNum && checkBoard(board.find(".small-board.N")) == clasNum && checkBoard(board.find(".small-board.NE")) == clasNum){
+                    return true;
+                }
+                if(checkBoard(board.find(".small-board.W")) == clasNum && checkBoard(board.find(".small-board.C")) == clasNum && checkBoard(board.find(".small-board.E")) == clasNum){
+                    return true;
+                }
+                if(checkBoard(board.find(".small-board.SW")) == clasNum && checkBoard(board.find(".small-board.S")) == clasNum && checkBoard(board.find(".small-board.SE")) == clasNum){
+                    return true;
+                }
+                if(checkBoard(board.find(".small-board.NW")) == clasNum && checkBoard(board.find(".small-board.W")) == clasNum && checkBoard(board.find(".small-board.SW")) == clasNum){
+                    return true;
+                }
+                if(checkBoard(board.find(".small-board.N")) == clasNum && checkBoard(board.find(".small-board.C")) == clasNum && checkBoard(board.find(".small-board.S")) == clasNum){
+                    return true;
+                }
+                if(checkBoard(board.find(".small-board.NE")) == clasNum && checkBoard(board.find(".small-board.E")) == clasNum && checkBoard(board.find(".small-board.SE")) == clasNum){
+                    return true;
+                }
+                if(checkBoard(board.find(".small-board.NW")) == clasNum && checkBoard(board.find(".small-board.C")) == clasNum && checkBoard(board.find(".small-board.SE")) == clasNum){
+                    return true;
+                }
+                if(checkBoard(board.find(".small-board.NE")) == clasNum && checkBoard(board.find(".small-board.C")) == clasNum && checkBoard(board.find(".small-board.SW")) == clasNum){
+                    return true;
+                }
+                
+                return false;
+            }
+            
+            function checkBigBoard(board){
+                if(checkBigBoardForClass(board, 1) == true){
+                    return 1;
+                } else if (checkBigBoardForClass(board, 2) == true){
+                    return 2;
+                }
+                return 0;
+            }
+            
+            
+            $(document).on("click", ".box.enabled", function(){
+                $(this).removeClass("enabled");
+                $(this).removeClass("n");
+                $(this).addClass("disabled");
+                if(turnCount % 2 == 0){
+                    $(this).addClass("x");
+                    $(this).append("X");
+                } else {
+                    $(this).addClass("o");
+                    $(this).append("O");
+                }
+                turnCount += 1;
+                
+                var smallBoard = $(this).parent().parent().parent().parent();
+                var bigBoard = $("#big-board");
+                
+                var smallCheck = checkBoard(smallBoard);
+                if(smallCheck == 1){
+                    smallBoard.css("background-image", "url(x.png)");
+                    smallBoard.find(".box.enabled").removeClass("enabled").addClass("disabled");
+                } else if(smallCheck == 2){
+                    smallBoard.css("background-image", "url(o.png)");
+                    smallBoard.find(".box.enabled").removeClass("enabled").addClass("disabled");
+                }
+                
+                var bigCheck = checkBigBoard(bigBoard);
+                if(bigCheck == 1){
+                    $("#announcement").append("X Won!").css("color", "red");
+                                    $(".box.enabled").removeClass("enabled").addClass("disabled");
+
+                    return;
+                } else if (bigCheck == 2){
+                    $("#announcement").append("O Won!").css("color", "blue");
+                                    $(".box.enabled").removeClass("enabled").addClass("disabled");
+
+                    return;
+                }
+                
+                $(".box.enabled").removeClass("enabled").addClass("disabled");
+                var setAll = false;
+                if($(this).parent().hasClass("NW")){
+                    if(checkBoard($(".small-board.NW"))==0){
+                        $(".small-board.NW").find(".n").removeClass("disabled").addClass("enabled");
+                    } else { setAll = true; }
+                } else if($(this).parent().hasClass("N")){
+                    if(checkBoard($(".small-board.N"))==0){
+                        $(".small-board.N").find(".n").removeClass("disabled").addClass("enabled");
+                    } else { setAll = true; }
+                } else if($(this).parent().hasClass("NE")){
+                    if(checkBoard($(".small-board.NE"))==0){
+                        $(".small-board.NE").find(".n").removeClass("disabled").addClass("enabled");
+                    } else { setAll = true; }
+                } else if($(this).parent().hasClass("W")){
+                    if(checkBoard($(".small-board.W"))==0){
+                        $(".small-board.W").find(".n").removeClass("disabled").addClass("enabled");
+                    } else { setAll = true; }
+                } else if($(this).parent().hasClass("C")){
+                    if(checkBoard($(".small-board.C"))==0){
+                        $(".small-board.C").find(".n").removeClass("disabled").addClass("enabled");
+                    } else { setAll = true; }
+                } else if($(this).parent().hasClass("E")){
+                    if(checkBoard($(".small-board.E"))==0){
+                        $(".small-board.E").find(".n").removeClass("disabled").addClass("enabled");
+                    } else { setAll = true; }
+                } else if($(this).parent().hasClass("SW")){
+                    if(checkBoard($(".small-board.SW"))==0){
+                        $(".small-board.SW").find(".n").removeClass("disabled").addClass("enabled");
+                    } else { setAll = true; }
+                } else if($(this).parent().hasClass("S")){
+                    if(checkBoard($(".small-board.S"))==0){
+                        $(".small-board.S").find(".n").removeClass("disabled").addClass("enabled");
+                    } else { setAll = true; }
+                } else if($(this).parent().hasClass("SE")){
+                    if(checkBoard($(".small-board.SE"))==0){
+                        $(".small-board.SE").find(".n").removeClass("disabled").addClass("enabled");
+                    } else { setAll = true; }
+                }
+                if(setAll == true){
+
+                    $(".small-board").each(function(){
+                        if(checkBoard($(this)) == 0){
+                            $(this).find(".n").removeClass("disabled").addClass("enabled");
+                        }
+                    });
+                }
+                
+            });
+            
+             
+        </script>
+    </body>
+</document>

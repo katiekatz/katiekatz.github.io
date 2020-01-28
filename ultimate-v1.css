@@ -1,0 +1,141 @@
+.small-board > table > tbody {
+    text-align: center;
+}
+
+table {
+    height: inherit;
+}
+
+tr:first-child {
+    padding-top: 10px;
+}
+
+.box {
+    display: block;
+    height: 100%;
+    font-size: 5vw;
+}
+
+@media screen and (min-width: 1200px) {
+  .box {
+    font-size: 3vw;
+  }
+}
+
+.box.enabled:hover {
+    background-color: burlywood;
+    cursor: pointer;
+}
+
+.small-board > table{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#announcement {
+    text-align: center;
+    font-size: 3vw;
+}
+
+
+
+
+.cell.NW {
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.cell.N {
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+.cell.NE {
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.cell.W {
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+}
+
+.cell.C {
+    border: 1px solid gray;
+}
+
+.cell.E {
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+}
+
+.cell.SW {
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+}
+
+.cell.S {
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+.cell.SE {
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+}
+
+.small-board.NW {
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.small-board.N {
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+}
+
+.small-board.NE {
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.small-board.W {
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+}
+
+.small-board.C {
+    border: 3px solid black;
+}
+
+.small-board.E {
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+}
+
+.small-board.SW {
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+}
+
+.small-board.S {
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+}
+
+.small-board.SE {
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+}
+
+button {
+    margin-top: 10px;
+}

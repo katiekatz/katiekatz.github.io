@@ -93,6 +93,11 @@ a:hover {
     display: none;
 }
 
+#show-game {
+    background-color: #d6e7ff;
+    min-height: inherit;
+}
+
 div#show-projects {
     background-color: #d6e7ff;
     min-height: inherit;
